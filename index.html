@@ -36,7 +36,7 @@
                     <figure><img src="images/rectangle.png" class="p-5" alt="Shoes" /></figure>
                     <div class="card-body">
                       <h2 class="card-title grid">Rectangle</h2>
-                      <p>Area (A) =0.5 X b X h</p>
+                      <p>Area (A) =0.5 X w X l</p>
                       <div class="input-area">
                         <input type="text" placeholder="b" class="w-[85px]  py-1 px-2 bg-gray-100 rounded-md"> <span>cm</span>
                         <input type="text" placeholder="h" class="w-[85px]  py-1 px-2 bg-gray-100 rounded-md"> <span>cm</span>
@@ -52,7 +52,7 @@
                     <figure><img src="images/parallelogram.png" class="p-5" alt="Shoes" /></figure>
                     <div class="card-body">
                       <h2 class="card-title grid">Parallelogram</h2>
-                      <p>Area (A) =0.5 X b X h</p>
+                      <p>Area (A) =b X h</p>
                       <div class="input-area">
                         <input type="text" placeholder="b" class="w-[85px]  py-1 px-2 bg-gray-100 rounded-md"> <span>cm</span>
                         <input type="text" placeholder="h" class="w-[85px]  py-1 px-2 bg-gray-100 rounded-md"> <span>cm</span>
@@ -68,7 +68,7 @@
                     <figure><img src="images/rhombus.png" class="p-5" alt="Shoes" /></figure>
                     <div class="card-body">
                       <h2 class="card-title grid">Rhombus</h2>
-                      <p>Area (A) =0.5 X b X h</p>
+                      <p>Area (A) =0.5 X d<sub>1</sub> X d<sub>2</sub></p>
                       <div class="input-area">
                         <input type="text" placeholder="b" class="w-[85px]  py-1 px-2 bg-gray-100 rounded-md"> <span>cm</span>
                         <input type="text" placeholder="h" class="w-[85px]  py-1 px-2 bg-gray-100 rounded-md"> <span>cm</span>
@@ -84,7 +84,7 @@
                     <figure><img src="images/pentagon.png" class="p-5" alt="Shoes" /></figure>
                     <div class="card-body">
                       <h2 class="card-title grid">Pentagon</h2>
-                      <p>Area (A) =0.5 X b X h</p>
+                      <p>Area (A) =0.5 X p X b</p>
                       <div class="input-area">
                         <input type="text" placeholder="b" class="w-[85px]  py-1 px-2 bg-gray-100 rounded-md"> <span>cm</span>
                         <input type="text" placeholder="h" class="w-[85px]  py-1 px-2 bg-gray-100 rounded-md"> <span>cm</span>
@@ -100,7 +100,7 @@
                     <figure><img src="images/ellipse.png" class="p-5" alt="Shoes" /></figure>
                     <div class="card-body">
                       <h2 class="card-title grid">Ellipse</h2>
-                      <p>Area (A) =0.5 X b X h</p>
+                      <p>Area (A) =πab</p>
                       <div class="input-area">
                         <input type="text" placeholder="b" class="w-[85px]  py-1 px-2 bg-gray-100 rounded-md"> <span>cm</span>
                         <input type="text" placeholder="h" class="w-[85px]  py-1 px-2 bg-gray-100 rounded-md"> <span>cm</span>
@@ -133,12 +133,12 @@
         console.log(width);
 
         // calculate the triangle area
-        const area = length * width;
+        const area = 0.5 * length * width;
         console.log('Area of the triangle is:', area);
 
         // display the triangle area
         const triangleAreaOutput = document.getElementById('triangle-area-result');
-        
+        triangleAreaOutput.innerText = area;
       }
     </script>
 </body>
