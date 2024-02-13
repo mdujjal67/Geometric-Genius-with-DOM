@@ -120,28 +120,5 @@
     </main>
 
     <script src="rectangle.js"></script>
-    <script>
-      function triangleAreaCalculate(){
-        // get length of the triangle
-        const triangleLengthInput = document.getElementById('triangle-length');
-        const lengthText = triangleLengthInput.value;
-        const length = parseFloat(lengthText);
-        console.log(length)
-
-        // get width of the triangle
-        const triangleWidthInput = document.getElementById('triangle-width');
-        const widthText = triangleWidthInput.value;
-        const width = parseFloat(widthText);
-        console.log(width);
-
-        // calculate the triangle area
-        const area = 0.5 * length * width;
-        console.log('Area of the triangle is:', area);
-
-        // display the triangle area
-        const triangleAreaOutput = document.getElementById('triangle-area-result');
-        triangleAreaOutput.innerText = area;
-      }
-    </script>
 </body>
 </html>

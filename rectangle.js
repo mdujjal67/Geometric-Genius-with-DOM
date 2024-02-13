@@ -68,11 +68,7 @@ function calculatePentagonValue(){
 }
 
 
-
-
-
-
-
+// triangle area using Normal Case
 function triangleAreaCalculate(){
     // get length of the triangle
     const triangleLengthInput = document.getElementById('triangle-length');
