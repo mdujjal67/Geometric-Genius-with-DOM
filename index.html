@@ -38,12 +38,12 @@
                       <h2 class="card-title grid">Rectangle</h2>
                       <p>Area (A) =0.5 X w X l</p>
                       <div class="input-area">
-                        <input type="text" placeholder="b" class="w-[85px]  py-1 px-2 bg-gray-100 rounded-md"> <span>cm</span>
-                        <input type="text" placeholder="h" class="w-[85px]  py-1 px-2 bg-gray-100 rounded-md"> <span>cm</span>
+                        <input type="text" placeholder="b" class="w-[85px]  py-1 px-2 bg-gray-100 rounded-md" id="rectangle-length" > <span>cm</span>
+                        <input type="text" placeholder="h" class="w-[85px]  py-1 px-2 bg-gray-100 rounded-md" id="rectangle-width"> <span>cm</span>
                       </div>
-                      <p>Area: <span></span> cm<sup>2</sup></p>
+                      <p>Area: <span id="rectangle-area-output">0</span> cm<sup>2</sup></p>
                       <div class="card-actions justify-end mt-4">
-                        <button class="btn btn-primary text-center w-full text-white">Calculate</button>
+                        <button class="btn btn-primary text-center w-full text-white" onclick="calculateTriangleValue()">Calculate</button>
                       </div>
                     </div>
                 </div>
@@ -54,12 +54,12 @@
                       <h2 class="card-title grid">Parallelogram</h2>
                       <p>Area (A) =b X h</p>
                       <div class="input-area">
-                        <input type="text" placeholder="b" class="w-[85px]  py-1 px-2 bg-gray-100 rounded-md"> <span>cm</span>
-                        <input type="text" placeholder="h" class="w-[85px]  py-1 px-2 bg-gray-100 rounded-md"> <span>cm</span>
+                        <input type="text" placeholder="b" class="w-[85px]  py-1 px-2 bg-gray-100 rounded-md" id="parallelogram-base"> <span>cm</span>
+                        <input type="text" placeholder="h" class="w-[85px]  py-1 px-2 bg-gray-100 rounded-md" id="parallelogram-height"> <span>cm</span>
                       </div>
-                      <p>Area: <span></span> cm<sup>2</sup></p>
+                      <p>Area: <span id="parallelogram-area-output">0</span> cm<sup>2</sup></p>
                       <div class="card-actions justify-end mt-4">
-                        <button class="btn btn-primary text-center w-full text-white">Calculate</button>
+                        <button class="btn btn-primary text-center w-full text-white" onclick="calculateParallelogramValue()">Calculate</button>
                       </div>
                     </div>
                 </div>
@@ -70,12 +70,12 @@
                       <h2 class="card-title grid">Rhombus</h2>
                       <p>Area (A) =0.5 X d<sub>1</sub> X d<sub>2</sub></p>
                       <div class="input-area">
-                        <input type="text" placeholder="b" class="w-[85px]  py-1 px-2 bg-gray-100 rounded-md"> <span>cm</span>
-                        <input type="text" placeholder="h" class="w-[85px]  py-1 px-2 bg-gray-100 rounded-md"> <span>cm</span>
+                        <input type="text" placeholder="b" class="w-[85px]  py-1 px-2 bg-gray-100 rounded-md" id="rhombus-length"> <span>cm</span>
+                        <input type="text" placeholder="h" class="w-[85px]  py-1 px-2 bg-gray-100 rounded-md" id="rhombus-width"> <span>cm</span>
                       </div>
-                      <p>Area: <span></span> cm<sup>2</sup></p>
+                      <p>Area: <span id="rhombus-area-output">0</span> cm<sup>2</sup></p>
                       <div class="card-actions justify-end mt-4">
-                        <button class="btn btn-primary text-center w-full text-white">Calculate</button>
+                        <button class="btn btn-primary text-center w-full text-white" onclick="calculateRhombusValue()">Calculate</button>
                       </div>
                     </div>
                 </div>
@@ -84,14 +84,14 @@
                     <figure><img src="images/pentagon.png" class="p-5" alt="Shoes" /></figure>
                     <div class="card-body">
                       <h2 class="card-title grid">Pentagon</h2>
-                      <p>Area (A) =0.5 X p X b</p>
+                      <p>Area (A) =0.5 X p X a</p>
                       <div class="input-area">
-                        <input type="text" placeholder="b" class="w-[85px]  py-1 px-2 bg-gray-100 rounded-md"> <span>cm</span>
-                        <input type="text" placeholder="h" class="w-[85px]  py-1 px-2 bg-gray-100 rounded-md"> <span>cm</span>
+                        <input type="text" placeholder="b" class="w-[85px]  py-1 px-2 bg-gray-100 rounded-md" id="perimeter-length"> <span>cm</span>
+                        <input type="text" placeholder="a" class="w-[85px]  py-1 px-2 bg-gray-100 rounded-md" id="apothem -width"> <span>cm</span>
                       </div>
-                      <p>Area: <span></span> cm<sup>2</sup></p>
+                      <p>Area: <span id="pentagon-area-output">0</span> cm<sup>2</sup></p>
                       <div class="card-actions justify-end mt-4">
-                        <button class="btn btn-primary text-center w-full text-white">Calculate</button>
+                        <button class="btn btn-primary text-center w-full text-white" onclick="calculatePentagonValue()">Calculate</button>
                       </div>
                     </div>
                 </div>
@@ -102,12 +102,13 @@
                       <h2 class="card-title grid">Ellipse</h2>
                       <p>Area (A) =πab</p>
                       <div class="input-area">
-                        <input type="text" placeholder="b" class="w-[85px]  py-1 px-2 bg-gray-100 rounded-md"> <span>cm</span>
-                        <input type="text" placeholder="h" class="w-[85px]  py-1 px-2 bg-gray-100 rounded-md"> <span>cm</span>
+                        <input type="text" placeholder="a" class="w-[85px]  py-1 px-2 bg-gray-100 rounded-md" id="ellipse-minor-length"> <span>cm</span>
+                        <input type="text" placeholder="b" class="w-[85px]  py-1 px-2 bg-gray-100 rounded-md" id="ellipse-major-length"> <span>cm</span>
                       </div>
-                      <p>Area: <span></span> cm<sup>2</sup></p>
+                      <p>Area: <span id="ellipse-area-output">0</span> cm<sup>2</sup></p>
+                      <p>where π = 3.1416</p>
                       <div class="card-actions justify-end mt-4">
-                        <button class="btn btn-primary text-center w-full text-white">Calculate</button>
+                        <button class="btn btn-primary text-center w-full text-white" onclick="calculatePentagonValue()">Calculate</button>
                       </div>
                     </div>
                 </div>
@@ -118,6 +119,7 @@
         </div>
     </main>
 
+    <script src="rectangle.js"></script>
     <script>
       function triangleAreaCalculate(){
         // get length of the triangle
