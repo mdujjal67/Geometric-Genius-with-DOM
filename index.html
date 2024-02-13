@@ -22,10 +22,10 @@
                       <h2 class="card-title grid">Triangle</h2>
                       <p>Area (A) =0.5 X b X h</p>
                       <div class="input-area">
-                        <input type="text" placeholder="b" class="w-[85px] py-1 px-2 bg-gray-100 rounded-md" id="rectangle-length"> <span>cm</span>
-                        <input type="text" placeholder="h" class="w-[85px] py-1 px-2 bg-gray-100 rounded-md" id="rectangle-width"> <span>cm</span>
+                        <input type="text" placeholder="b" class="w-[85px] py-1 px-2 bg-gray-100 rounded-md" id="triangle-length"> <span>cm</span>
+                        <input type="text" placeholder="h" class="w-[85px] py-1 px-2 bg-gray-100 rounded-md" id="triangle-width"> <span>cm</span>
                       </div>
-                      <p>Area: <span></span> cm<sup>2</sup></p>
+                      <p>Area: <span id="triangle-area-result">0</span> cm<sup>2</sup></p>
                       <div class="card-actions justify-end mt-4">
                         <button class="btn btn-primary text-center w-full text-white" onclick="triangleAreaCalculate()">Calculate</button>
                       </div>
@@ -120,14 +120,25 @@
 
     <script>
       function triangleAreaCalculate(){
-        // get length of the rectangle
-        const rectangleLengthInput = document.getElementById('rectangle-length');
-        const lengthText = rectangleLengthInput.value;
-        const lengthInput = parseFloat(lengthText);
-        console.log(lengthText)
+        // get length of the triangle
+        const triangleLengthInput = document.getElementById('triangle-length');
+        const lengthText = triangleLengthInput.value;
+        const length = parseFloat(lengthText);
+        console.log(length)
 
-        // get width of the rectangle
-        const rectangleWidthInput = document.getElementById('')
+        // get width of the triangle
+        const triangleWidthInput = document.getElementById('triangle-width');
+        const widthText = triangleWidthInput.value;
+        const width = parseFloat(widthText);
+        console.log(width);
+
+        // calculate the triangle area
+        const area = length * width;
+        console.log('Area of the triangle is:', area);
+
+        // display the triangle area
+        const triangleAreaOutput = document.getElementById('triangle-area-result');
+        
       }
     </script>
 </body>
